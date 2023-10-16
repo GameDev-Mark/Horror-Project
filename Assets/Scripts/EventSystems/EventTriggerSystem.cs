@@ -19,4 +19,13 @@ public class EventTriggerSystem : Singleton<EventTriggerSystem>
             onTriggerEquippedItemOnOrOff(name, amount, isOnOrOff);
         }
     }
+
+    public event Action ontriggerUseItem;
+    public void TriggerUseItem()
+    {
+        if (ontriggerUseItem != null)
+        {
+            ontriggerUseItem();
+        }
+    }
 }

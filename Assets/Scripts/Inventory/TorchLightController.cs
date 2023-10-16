@@ -52,7 +52,7 @@ public class TorchLightController : EquippedItemHandler
     //
     protected override void OnOrOff(bool isOnOrOff)
     {
-        if (TurnOnOrOffItem(false))
+        if (base.TurnOnOrOffItem(false))
         {
             if (torchLight.gameObject.activeInHierarchy)
             {
